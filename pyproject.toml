@@ -13,3 +13,22 @@ filterwarnings = [
     "ignore:::pynvim[.*]"
 ]
 
+
+[tool.poetry]
+name = "neotest-python"
+version = "0.1.0"
+description = "Neotest adapter for python. Supports Pytest and unittest test files."
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "neotest_python"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.scripts]
+neotest = "neotest_python:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

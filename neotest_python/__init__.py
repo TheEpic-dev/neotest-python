@@ -1,7 +1,6 @@
 import argparse
 import json
 from enum import Enum
-from typing import List
 
 from neotest_python.base import NeotestAdapter, NeotestResult
 
@@ -40,8 +39,8 @@ parser.add_argument(
 parser.add_argument("args", nargs="*")
 
 
-def main(argv: List[str]):
-    args = parser.parse_args(argv)
+def main():
+    args = parser.parse_args()
     adapter = get_adapter(TestRunner(args.runner))
 
     with open(args.stream_file, "w") as stream_file:
